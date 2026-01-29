@@ -1,0 +1,8 @@
+DEVELOPMENT LOG — D3 Fundamental
+
+I copied the Template folder and edited js/main.js. I used d3.select("#chart-area") and append("svg") to create the SVG (400x400). 
+Then I appended a circle (cx=100, cy=250, r=70) and a rectangle (x=20, y=20, width=20, height=30) and set their fill colors.
+
+AI usage: This was a simple exercise and I mostly followed the provided snippets. 
+I only used AI to fix the RGB color format, because my initial attempt did not work. 
+AI told me to use a string like "rgb(0,0,255)" for blue, which solved it.
