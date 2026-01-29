@@ -1,0 +1,11 @@
+DEVELOPMENT LOG — Select and data binding
+
+I created a copy of the Template folder and edited js/main.js. I used d3.select("#chart-area") to append an SVG element of 400x400. 
+Then I created a data array with values [25, 20, 15, 10, 5] and used selectAll("rect").data(data).enter().append("rect") to bind the data to rectangles.
+
+Each rectangle has a width of 40 and height based on its bound data value. I used the formula y = 255 - d to make them bottom aligned. 
+The x position is calculated with the index (i * 50) to space them horizontally.
+
+AI usage: I used AI to help determine the RGB color values for the fill attribute. 
+My initial attempt resulted in all rectangles appearing black because the color values were too low. 
+AI suggested multiplying the data and index values to create visible color variation: rgb(${i*10}, ${d*10}, ${i*15}).
