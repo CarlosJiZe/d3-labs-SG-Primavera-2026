@@ -1,0 +1,10 @@
+DEVELOPMENT LOG — Loading Data from File
+
+I tested loading data from CSV, TSV, and JSON files using d3.csv(), d3.tsv(), and d3.json(). 
+Data is loaded as strings, so I used +d.age to convert age to numbers.
+I created an SVG of 400x400 and bound the JSON data to circles using selectAll("circle").data(data).enter().append("circle"). 
+Each circle's radius is based on the age value. Important: all code using data must be inside .then() because loading is asynchronous.
+For error handling, I added .catch() and tested it by misspelling the filename as "ajes.json" — the error was logged instead of crashing.
+Extra: I added conditional colors where circles with age > 10 are orange and ≤ 10 are blue.
+
+AI Usage: I used AI to learn the ternary operator syntax for the conditional fill: d.age > 10 ? "orange" : "blue".
