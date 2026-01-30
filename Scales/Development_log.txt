@@ -1,0 +1,9 @@
+DEVELOPMENT LOG — Using Scales
+
+I started from my Challenge I code and modified js/main.js to implement D3 scales.
+I created an SVG of 500x500 and used three scales: d3.scaleBand() for the X axis with the building names as domain and padding of 0.3, 
+d3.scaleLinear() for the Y axis mapping heights from 0 to the max height, 
+and d3.scaleOrdinal() for colors using d3.schemeSet3.
+I used x(d.name) for positioning, x.bandwidth() for automatic width, y(d.height) for height, 
+and color(d.name) for fill. Error handling included with .catch().
+AI Usage: I used AI to learn how to implement the ordinal color scale with d3.schemeSet3.
