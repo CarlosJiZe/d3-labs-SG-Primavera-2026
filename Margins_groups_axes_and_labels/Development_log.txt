@@ -1,0 +1,10 @@
+DEVELOPMENT LOG — Margins, Groups, Axes and Labels
+
+I started from my Exercise 4 code and added margins, groups, axes, and labels.
+I defined a canvas of 600x400 with margins { left: 100, right: 10, top: 10, bottom: 150 }. 
+I created a group with translate() to handle the margins and added all elements to this group instead of the SVG directly.
+I created a bottom axis with d3.axisBottom(x) and rotated the labels -40° to avoid overlap. For the left axis, I used d3.axisLeft(y) with .ticks(5) and .tickFormat(d => d + "m"). 
+I added labels for both axes: "The world's tallest buildings" centered at the bottom and "Height (m)" rotated -90° on the left.
+To fix the bar direction, I inverted the Y scale range from [0, height] to [height, 0] and adjusted the rect attributes to .attr("y", d => y(d.height)) and .attr("height", d => height - y(d.height)).
+AI Usage: I used AI to debug why the X label was disappearing (the y position was outside the SVG area, so I increased margin.bottom to 150). 
+I also used AI to understand the logic of inverting the Y range to make bars grow from the bottom.
