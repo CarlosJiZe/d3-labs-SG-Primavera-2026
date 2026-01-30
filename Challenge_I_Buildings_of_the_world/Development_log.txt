@@ -1,0 +1,10 @@
+DEVELOPMENT LOG — Challenge I: Buildings of the World
+
+I created a copy of the Template folder and edited js/main.js. 
+I used d3.json() to load the buildings.json file and converted the height property to numbers using +d.height.
+
+I appended an SVG of 1000x1000 to #chart-area and used selectAll("rect").data(data).enter().append("rect") to bind the data to rectangles. 
+Each rectangle has a width of 40 and height based on d.height. I used y = 1000 - d.height to align them to the bottom. The x position is calculated with (i*50) to space them horizontally. 
+I also added dynamic RGB colors and .catch() for error handling.
+
+AI Usage: None.
