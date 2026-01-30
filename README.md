@@ -92,7 +92,7 @@ Exercise_Name/
 | 2 | Select and Data Binding | Using `.select()`, `.selectAll()`, and `.data()` | ✅ |
 | 3 | Loading Data from File | Reading JSON and CSV files with D3 | ✅ |
 | - | *Challenge I: Buildings of the World* | *Practice loading external data* | ✅ |
-| 4 | Scales | Linear, band, and ordinal scales | ⬜ |
+| 4 | Scales | Linear, band, and ordinal scales | ✅ |
 | 5 | Margins, Groups, Axes and Labels | Proper chart structure with margins | ⬜ |
 | - | *Project I: Star Brewery* | *Complete visualization project* | ⬜ |
 | 6 | Simulating Update Events | Dynamic data updates | ⬜ |
