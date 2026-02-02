@@ -1,8 +1,13 @@
-DEVELOPMENT LOG — Star Lion Brewery
-I created a bar chart to display the brewery's revenue data from January to July. I loaded the data from revenues.json and converted revenue values to numbers.
-I set up an SVG of 600x400 with margins { left: 100, right: 10, top: 100, bottom: 60 }. I separated the SVG and group to add a black background rectangle. 
-I created a header group containing a brown/gold stripe and the brewery logo using svg.append("g") with translate.
-For the axes, I used d3.scaleBand() for X (months) and d3.scaleLinear() for Y (revenue). I formatted the Y axis ticks to show currency with "$" + (d/1000) + "K". 
-I added labels for both axes in white.
-The bars are filled with yellow rgb(204,204,2) to match the brewery branding.
-AI Usage: I used AI to help change the background to black and style the axes (using stroke: white for lines and fill: white for text), since CSS wasn't applying correctly due to Bootstrap conflicts.
+DEVELOPMENT LOG — Simulating Update Event
+
+I implemented a dynamic bar chart that alternates between revenue and profit data using the D3 Update Pattern. 
+The visualization switches datasets every second with d3.interval().
+
+I implemented the complete Update Pattern: JOIN → EXIT → UPDATE → ENTER. 
+A boolean flag toggles between datasets and updates the Y-axis label accordingly.
+
+The scales and axes update their domains on each update() call to adapt to current data values. 
+I maintained the brewery's visual identity with black background, brown/gold header, logo, and yellow bars.
+
+AI Usage: AI helped me fix axis styling. My classes were "x-axis" and "y-axis" but my CSS selector looked for ".axis", causing a mismatch. 
+AI suggested using "x axis" and "y axis" as class names so the selector would work.
