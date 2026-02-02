@@ -1,0 +1,12 @@
+DEVELOPMENT LOG — Playing with transitions
+
+I implemented smooth transitions for the dynamic bar chart. 
+The visualization now animates when switching between revenue and profit data.
+
+I added transitions to EXIT (bars disappear downward), UPDATE (bars move to new positions), and ENTER (bars grow from bottom). 
+All use 750ms duration. I used a key function .data(data, d => d.month) to track bars correctly and prevent axis jumping.
+
+The interval alternates between all months (revenue) and data.slice(1) (profit without January) to demonstrate the EXIT pattern.
+
+AI Usage: AI helped fix the ENTER transition. My bars started at their final position, so the transition had no effect. 
+AI explained they need to start at the bottom (height, 0) and animate upward.
