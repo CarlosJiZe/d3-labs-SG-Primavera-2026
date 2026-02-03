@@ -97,7 +97,7 @@ Exercise_Name/
 | - | *Project I: Star Brewery* | *Complete visualization project* | ✅ |
 | 6 | Simulating Update Events | Dynamic data updates | ✅ |
 | 7 | Playing with Transitions | Animated transitions | ✅ |
-| - | *Project II: Project Leaf* | *Complete visualization project* | ⬜ |
+| - | *Project II: Project Leaf* | *Complete visualization project* | ✅ |
 | 8 | Event Handling | Mouse and click events | ⬜ |
 | 9 | Line Chart | Creating line charts | ⬜ |
 | 10 | Area Chart | Creating area charts | ⬜ |
