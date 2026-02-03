@@ -1,0 +1,11 @@
+DEVELOPMENT LOG — Leaf Project
+I created an animated scatter plot showing GDP vs life expectancy over time. 
+Circle size represents population, color represents continent.
+
+I cleaned nested JSON data, filtering incomplete records. I implemented logarithmic X-axis, linear Y-axis, area scale for population, and ordinal color scale. 
+I extracted continent names dynamically for the legend.
+
+I implemented the Update Pattern with transitions: EXIT (shrink, 500ms), UPDATE (move, 1000ms), ENTER (grow, 1000ms). 
+Used key function for proper circle tracking. Animation loops through years with d3.interval() every 1000ms.
+
+AI Usage: AI helped add smooth transitions. Initially circles teleported because I updated attributes directly without .transition().duration().
