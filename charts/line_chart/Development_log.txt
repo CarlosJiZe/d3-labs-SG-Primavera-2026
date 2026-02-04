@@ -1,0 +1,10 @@
+DEVELOPMENT LOG — Line Chart
+
+I created a line chart showing population data over time (2005-2015). 
+
+I implemented d3.line() generator with x and y accessors, set scale domains using d3.extent() for x-axis and min/max with padding for y-axis, and added the path with the line generator.
+
+The exercise included a pre-built tooltip system that displays value on hover with crosshair lines and a circle marker. 
+I studied the mousemove function to understand how it uses bisectDate to find the closest data point.
+
+AI Usage: AI helped fix Y-axis ticks display. Initially tried .tickValues() with hardcoded values which broke the scale. Solution was using .ticks(4) with adjusted domain padding (/ 1.005, * 1.005) to let D3 choose appropriate tick values automatically.

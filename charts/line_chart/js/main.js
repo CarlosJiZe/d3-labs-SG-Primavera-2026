@@ -10,6 +10,12 @@ var svg = d3.select("#chart-area").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom);
 
+// Dark background
+svg.append("rect")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .attr("fill", "#000");
+
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + 
         ", " + margin.top + ")");
@@ -26,7 +32,7 @@ var y = d3.scaleLinear().range([height, 0]);
 // Axis generators
 var xAxisCall = d3.axisBottom()
 var yAxisCall = d3.axisLeft()
-    .ticks(6)
+    .ticks(4)
     .tickFormat((d) => { return parseInt(d / 1000) + "k"; });
 
 // Axis groups
@@ -43,11 +49,14 @@ yAxis.append("text")
     .attr("y", 6)
     .attr("dy", ".71em")
     .style("text-anchor", "end")
-    .attr("fill", "#5D6971")
+    .attr("fill", "#bbb")
     .text("Population)");
 
 // Line path generator
 // TODO: Implement the line generator
+var line = d3.line()
+    .x((d) => { return x(d.year); })
+    .y((d) => { return y(d.value); });
 
 d3.json("data/example.json").then((data) => {
     // Data cleaning
@@ -58,13 +67,29 @@ d3.json("data/example.json").then((data) => {
 
     // Set scale domains
     // TODO: set domain of axes
+    x.domain(d3.extent(data, (d) => { return d.year; }));
+    y.domain([d3.min(data, (d) => { return d.value; }) / 1.005, 
+              d3.max(data, (d) => { return d.value; }) * 1.005]);
 
     // Generate axes once scales have been set
     xAxis.call(xAxisCall.scale(x))
     yAxis.call(yAxisCall.scale(y))
 
+    // Style axes for dark theme
+    g.selectAll(".axis path, .axis line")
+        .attr("stroke", "#bbb");
+    
+    g.selectAll(".axis text")
+        .attr("fill", "#bbb");
+
     // Add line to chart
     // TODO: add line path
+    g.append("path")
+        .attr("class", "line")
+        .attr("fill", "none")
+        .attr("stroke", "#ddd")
+        .attr("stroke-width", "3px")
+        .attr("d", line(data));
 
     /******************************** Tooltip Code ********************************/
 
@@ -87,7 +112,8 @@ d3.json("data/example.json").then((data) => {
 
     focus.append("text")
         .attr("x", 15)
-        .attr("dy", ".31em");
+        .attr("dy", ".31em")
+        .attr("fill", "#fff");
 
     g.append("rect")
         .attr("class", "overlay")
