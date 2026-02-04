@@ -1,0 +1,11 @@
+DEVELOPMENT LOG — Pie/Donut Chart
+
+I created an interactive donut chart showing fruit distribution by regions with dynamic data switching.
+
+I implemented d3.arc() with outerRadius and innerRadius (innerRadius > 0 creates the donut hole). Created d3.pie() layout with .value() to extract count field and .sort(null) to maintain data order. 
+Used d3.nest() to group data by fruit, creating the structure needed for radio button generation and data filtering.
+
+The exercise included pre-built Update Pattern animations using arcTween interpolation for smooth transitions between datasets. 
+Radio buttons were generated dynamically from nested data, with .on("change", update) event listeners triggering the transition animations when switching between fruits.
+
+AI Usage: AI helped with data transformation (converting count to number with +d.count and normalizing fruit names to lowercase) because I had issues getting the data in the proper format for the pie layout.
