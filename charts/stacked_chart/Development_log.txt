@@ -1,0 +1,10 @@
+DEVELOPMENT LOG — Stacked Area Chart
+
+I created a stacked area chart showing beer production by country over time (2002-2015).
+
+I implemented d3.stack() to transform flat data into layered paths. Extracted keys by filtering out 'date' column, then configured the stack with stackOrderNone for order and offset. 
+The area generator uses d.data.date for x, and d[0]/d[1] for y0/y1 - different from simple area charts because stack() transforms data into nested arrays where d[0] is layer base and d[1] is layer top.
+
+Created groups for each country using selectAll/data/enter pattern, appended paths with area generator, and added a legend with color squares and text labels.
+
+AI Usage: AI helped reverse the legend order using keys.slice().reverse() because my initial implementation displayed countries backwards.
