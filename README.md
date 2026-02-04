@@ -98,7 +98,7 @@ Exercise_Name/
 | 6 | Simulating Update Events | Dynamic data updates | ✅ |
 | 7 | Playing with Transitions | Animated transitions | ✅ |
 | - | *Project II: Project Leaf* | *Complete visualization project* | ✅ |
-| 8 | Event Handling | Mouse and click events | ⬜ |
+| 8 | Event Handling | Mouse and click events | ✅ |
 | 9 | Line Chart | Creating line charts | ⬜ |
 | 10 | Area Chart | Creating area charts | ⬜ |
 | 11 | Stacked Area Chart | Creating stacked area charts | ⬜ |
