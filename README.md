@@ -102,7 +102,7 @@ Exercise_Name/
 | 9 | Line Chart | Creating line charts | ✅ |
 | 10 | Area Chart | Creating area charts | ✅ |
 | 11 | Stacked Area Chart | Creating stacked area charts | ✅ |
-| 12 | Pie/Donut Chart | Creating pie and donut charts | ⬜ |
+| 12 | Pie/Donut Chart | Creating pie and donut charts | ✅ |
 
 ## 🛠️ Technologies
 
