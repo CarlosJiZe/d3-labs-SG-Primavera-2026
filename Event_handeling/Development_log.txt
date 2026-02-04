@@ -1,0 +1,12 @@
+DEVELOPMENT LOG — Event Handling
+
+I added interactive controls to the Gapminder visualization: Play/Pause and Reset buttons, year slider, continent dropdown filter, and tooltips on hover.
+
+I embedded HTML controls inside SVG using foreignObject, positioning them in the margins. 
+This approach gave better control over layout compared to external HTML elements.
+
+I implemented event listeners with jQuery: Play/Pause toggles setInterval/clearInterval, Reset returns to year 1800, slider syncs with animation, dropdown filters by continent using .filter().
+
+The tooltip uses d3-tip library, displaying country details with formatted numbers (d3.format).
+
+AI Usage: AI helped position controls in SVG margins using foreignObject instead of external HTML, which simplified layout management.
